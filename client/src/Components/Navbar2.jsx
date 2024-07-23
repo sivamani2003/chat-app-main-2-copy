@@ -88,7 +88,7 @@ const NavBar2 = () => {
               className="text-black item2 hover:text-gray-400 flex items-center"
               onClick={handleComponent1Click}
             >
-              <span className="mr-1">Component 1</span>
+              <span className="mr-1">Serives</span>
             </button>
           </div>
           <div className="relative">
@@ -96,7 +96,7 @@ const NavBar2 = () => {
               className="text-black item2 hover:text-gray-400 flex items-center"
               onClick={handleComponent2Click}
             >
-              <span className="mr-1">Component 2</span>
+              <span className="mr-1">Events</span>
               <IoIosArrowDropdownCircle className="text-lg" />
             </button>
           </div>
