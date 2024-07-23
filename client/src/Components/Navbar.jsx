@@ -17,7 +17,7 @@ const Navbar = () => {
 
   axios.defaults.withCredentials=true;
   useEffect(()=>{
-    axios.get('http://localhost:8080/id')
+    axios.get('https://chat-app-main-2-copy.onrender.com/id')
     .then(result=>{
         if(result.data.valid){
           setAuth(true)
@@ -30,10 +30,10 @@ const Navbar = () => {
   const [showLogoutModal, setShowLogoutModal] = useState(false);
 
   const handleLogout = () => {
-    // const result = await axios.get('http://localhost:8080/remove-id')
+    // const result = await axios.get('https://chat-app-main-2-copy.onrender.com/remove-id')
     console.log('result')
     //window.location.href = '/login'; // Redirect to login page (replace with your logic)
-    axios.get('http://localhost:8080/remove-id')
+    axios.get('https://chat-app-main-2-copy.onrender.com/remove-id')
     .then(result=>{
       console.log(result)
       window.location.reload();

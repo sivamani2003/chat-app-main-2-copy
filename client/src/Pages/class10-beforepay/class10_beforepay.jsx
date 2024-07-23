@@ -40,7 +40,7 @@ function Class10_beforepay() {
 
   axios.defaults.withCredentials=true;
   useEffect(()=>{
-    axios.get('http://localhost:8080/id')
+    axios.get('https://chat-app-main-2-copy.onrender.com/id')
     .then(result=>{
         if(result.data.valid){
           setId(result.data.id)
@@ -60,9 +60,9 @@ function Class10_beforepay() {
 			order_id: data.id,
 			handler: async (response) => {
 				try {
-					const verifyUrl = "http://localhost:8080/api/payment/verify";
+					const verifyUrl = "https://chat-app-main-2-copy.onrender.com/api/payment/verify";
 					const result = await axios.post(verifyUrl, response);
-          const result2 = await axios.post(`http://localhost:8080/api/mentors/assign-mentor/${id}`,{subjects:["maths","physics","chemistry","biology"]})
+          const result2 = await axios.post(`https://chat-app-main-2-copy.onrender.com/api/mentors/assign-mentor/${id}`,{subjects:["maths","physics","chemistry","biology"]})
           navigate('/')
 					console.log(result);
 				} catch (error) {
@@ -80,7 +80,7 @@ function Class10_beforepay() {
 	const handlePayment = async () => {
 		try {
       if(auth){
-        const orderUrl = "http://localhost:8080/api/payment/orders";
+        const orderUrl = "https://chat-app-main-2-copy.onrender.com/api/payment/orders";
         const { data } = await axios.post(orderUrl, { amount: price });
         console.log(data);
         initPayment(data.data);

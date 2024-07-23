@@ -483,7 +483,7 @@ const RegisterPage = () => {
 			order_id: data.id,
 			handler: async (response) => {
 				try {
-					const verifyUrl = "http://localhost:8080/api/payment/verify";
+					const verifyUrl = "https://chat-app-main-2-copy.onrender.com/api/payment/verify";
           console.log(verifyUrl)
 					const result = await axios.post(verifyUrl, response);
           navigate('/email');
@@ -511,7 +511,7 @@ const RegisterPage = () => {
     try {
 
       if(!isMentor){
-        const orderUrl = "http://localhost:8080/api/payment/orders";
+        const orderUrl = "https://chat-app-main-2-copy.onrender.com/api/payment/orders";
         const { data } = await axios.post(orderUrl, { amount: price });
         console.log(data);
         initPayment(data.data);

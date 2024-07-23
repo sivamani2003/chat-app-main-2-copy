@@ -18,7 +18,7 @@ const io = new Server(server,{
 })
 
 /***
- * socket running at http://localhost:8080/
+ * socket running at https://chat-app-main-2-copy.onrender.com/
  */
 
 //online user
