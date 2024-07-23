@@ -65,7 +65,7 @@ function App() {
   return (
     <Routes>
       {/* <Route path='/' element={<Home />} /> */}
-      <Route path='/home' element={<Home />} />
+      <Route path='/' element={<Home />} />
       <Route path='/mentorship' element={<Menotor_home1 />} />
       <Route path='/careers' element={<ResultsComponent/>} />
       <Route path="/mentorservices" element={<Services1/>}></Route>
